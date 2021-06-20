@@ -1,0 +1,39 @@
+.singleItem{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: .1rem solid rgba(0,47,52,.2);
+    border-radius: 4px;
+    min-width: 180px;
+    height: 100%;
+    max-width: 210px;
+    padding:10px;
+    margin: 10px 5px; 
+    display: table-caption;
+}
+.poster img {
+    width: 100%;
+    height:200px;
+}
+.price{
+    font-weight:700;
+font-size:20px;
+line-height:18px;
+color:#002f34;
+}
+.tagline{
+    font-size:14px;
+line-height:18px;
+color:#61797d;
+}
+.item-ftr{
+display: flex;
+justify-content: space-between;
+font-size:10px;
+line-height:15px;
+color:#61797d;
+}

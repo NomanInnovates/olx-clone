@@ -1,0 +1,43 @@
+.footer {
+  font-family: "Roboto", sans-serif;
+  background: #f7f8f9;
+  border-top: 1px solid #ccc;
+}
+.footer-block {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+}
+.block {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 15px 5px;
+}
+.block .titles {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #002f34;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.block a {
+  color: #444;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+}
+.block a:hover {
+  color: #002f34;
+}
+.footerCopyRight {
+  background: #002f34;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 12px 10%;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}

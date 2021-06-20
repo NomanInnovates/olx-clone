@@ -1,0 +1,28 @@
+.post_product{
+    max-width: 700px;
+    width: 85%;
+    margin: 0 auto;
+}
+input,textarea{
+    width: 97%;
+    padding: 5px
+}
+.small_info{
+    font-size: 9px; 
+    color: "#cfd1d3"
+}
+.post_product h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Roboto",'Arial','Helvetica'
+}
+.inner_post h4{
+    font-size: 14px;
+    font-family: 'Roboto',Arial,Helvetica,sans-serif ; 
+}
+button[submit]{
+    color: white;
+    background-color: green;
+    padding: 5px;
+}

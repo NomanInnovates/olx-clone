@@ -1,0 +1,14 @@
+.bannerContainer{
+    text-align: center;
+}
+.bannerContainer img{
+    padding:0px;
+}
+.addContainer{
+width: 100%;
+}
+
+.addContainer img{
+margin: 10px auto;
+display:block;
+}
