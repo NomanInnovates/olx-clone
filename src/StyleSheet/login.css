@@ -1,15 +1,16 @@
-.login_container{
+.login_container {
     height: 100vh;
     position: relative;
     background: #474747b8;
 }
-.login{
+
+.login {
     position: absolute;
     top: 50%;
     bottom: auto;
     left: 50%;
     right: auto;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 85%;
     max-width: 30rem;
     max-height: fit-content;
@@ -17,7 +18,8 @@
     background-color: #fff;
     padding: 10px;
 }
-.crox{
+
+.crox {
     float: right;
     background: none;
     border: none;
@@ -26,20 +28,23 @@
     cursor: pointer;
     color: inherit;
 }
-.login_img_container{
+
+.login_img_container {
     text-align: center;
 }
-.login_img{
+
+.login_img {
     width: 10rem;
     margin: 0 auto;
     height: 10rem;
     display: block;
 }
-.optionBtnContainer button{
+
+.optionBtnContainer button {
     display: block;
     width: 95%;
     padding: 20px;
-    margin:10px;
+    margin: 10px;
     color: #002f34;
     background-color: #fff;
     border: 2px solid #002f34;
