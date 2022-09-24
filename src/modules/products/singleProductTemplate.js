@@ -1,5 +1,6 @@
 import React from "react";
 import "../../StyleSheet/singleProduct.css";
+
 function SingleProduct(props) {
   return (
     <div className="singleItem">

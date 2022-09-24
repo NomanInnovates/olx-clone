@@ -26,9 +26,9 @@ function ProductContainer() {
             >
               <SingleProduct
                 key={item.id}
-                price={item.price}
                 src={item.url}
                 name={item.title}
+                price={item.price}
                 location={item.location}
                 time={moment(item.time).startOf("day").fromNow()}
               />{" "}
