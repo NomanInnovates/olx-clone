@@ -11,14 +11,7 @@ function App() {
         <Route exact path="/Login" component={Login} />
         <Route exact path="/AddProduct" component={AddProduct} />
         <Route exact path="/itemDetails" component={ItemDetail} />
-        {/* <Route exact path="/cars" component={Cars} />
-<Route exact path="/motorcycles" component={Motorcycles} />
-<Route exact path="/houses" component={Houses} />
-<Route exact path="/tv" component={TV} />
-<Route exact path="/tablets" component={Tablets} />
-<Route exact path="/addpost" component={PostAdd} />
-<Route exact path="/details" component={Details} />
-<Route exact path="/login" component={LoginSetting} /> */}
+    
       </Switch>
     </div>
   );

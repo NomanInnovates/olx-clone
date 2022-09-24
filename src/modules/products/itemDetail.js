@@ -30,7 +30,7 @@ function ItemDetail(props) {
               <div className="setMargin">
                 <h1 style={{ marginTop: "3%" }} className="text-dark">
                   {" "}
-                  Rs Price{props.location.about.name.price}
+                  Rs Price {price}
                 </h1>
                 <span className="text-secondary" style={{ fontSize: "20px" }}>
                   Title:{title}

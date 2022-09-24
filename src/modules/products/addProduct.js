@@ -63,7 +63,7 @@ function AddProduct() {
                     height: "19px",
                     border: "none",
                   }}
-                  name="price"
+                  
                 />
               </div>
             </div>
@@ -89,7 +89,7 @@ function AddProduct() {
                   height: "70px",
                   backgroundColor: "grey",
                 }}
-                alt="no image"
+                alt="no found"
               />
               <br />
             </div>
