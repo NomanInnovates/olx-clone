@@ -1,7 +1,8 @@
 import React from "react";
+
 import "../StyleSheet/hero.css";
-import bannerImg from "../images/banner.png";
 import ads from "../images/ads.png";
+import bannerImg from "../images/banner.png";
 
 function Hero() {
   return (
