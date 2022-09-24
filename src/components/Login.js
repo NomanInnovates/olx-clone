@@ -1,6 +1,7 @@
 import React from "react";
-import "../StyleSheet/login.css";
 import { Link } from "react-router-dom";
+
+import "../StyleSheet/login.css";
 import { authen } from "../config/firebase";
 import avatar from "../images/iconProfile.png";
 
@@ -10,20 +11,15 @@ function Login() {
     authen
       .signInWithPopup(provider)
       .then((result) => {
-        // var user = result.user;
         console.log(result);
         // var credential = result.credential;
 
         // The signed-in user info.
-
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         // var accessToken = credential.accessToken;
-
-        // ...
       })
       .catch((error) => {
         // Handle Errors here.
-        // var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorMessage);
         // The email of the user's account use

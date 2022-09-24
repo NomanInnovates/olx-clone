@@ -1,6 +1,8 @@
 import { useAddProducts } from "./useAddProducts";
 import "../../StyleSheet/addProduct.css";
+
 function AddProduct() {
+
   const [
     sendSubmitData,
     SubmitData,
@@ -63,7 +65,7 @@ function AddProduct() {
                     height: "19px",
                     border: "none",
                   }}
-                  
+
                 />
               </div>
             </div>

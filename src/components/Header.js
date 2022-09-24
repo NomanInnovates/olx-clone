@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom";
+
 import SearchIcon from "./Icon";
 import "../StyleSheet/header.css";
-import { NavLink, Link } from "react-router-dom";
 
 function Header() {
   let navList = [

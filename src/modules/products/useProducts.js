@@ -7,20 +7,20 @@ export function useProducts() {
   const [loading, setLoading] = useState(true)
   const fetchproducts = useSelector((state) => state.productReducer.products);
 
-  const callBack = () =>{
+  const callBack = () => {
     setLoading(false)
   }
-  const fetchPro =useCallback(
+  const fetchPro = useCallback(
     () => {
       dispatch(productAction(callBack));
     },
     [dispatch],
   )
-   
+
 
   useEffect(() => {
     fetchPro();
   }, [fetchPro]);
 
-  return [fetchproducts,loading];
+  return [fetchproducts, loading];
 }
