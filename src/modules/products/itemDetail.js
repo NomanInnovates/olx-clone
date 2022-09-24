@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 function ItemDetail(props) {
-  const { category, desc, company, price, location, time, title, url } =
+  const { category, desc, price, location, time, title, url } =
     props.location.about.name;
 
   return (

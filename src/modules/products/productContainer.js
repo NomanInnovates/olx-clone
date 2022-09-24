@@ -7,7 +7,6 @@ import SingleProduct from "./singleProductTemplate.js";
 
 function ProductContainer() {
   const [pros,loading] = useProducts();
-  console.log("pros",pros)
   return (
     <div className="products">
       {Array.isArray(pros) && pros.length > 0 ? (

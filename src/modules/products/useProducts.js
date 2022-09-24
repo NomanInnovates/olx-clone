@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { productAction } from "../../redux/action/productAction";
 
@@ -10,13 +10,17 @@ export function useProducts() {
   const callBack = () =>{
     setLoading(false)
   }
-  const fetchPro =  () => {
-    dispatch(productAction(callBack));
-  };
-  
+  const fetchPro =useCallback(
+    () => {
+      dispatch(productAction(callBack));
+    },
+    [dispatch],
+  )
+   
+
   useEffect(() => {
     fetchPro();
-  }, []);
+  }, [fetchPro]);
 
   return [fetchproducts,loading];
 }
