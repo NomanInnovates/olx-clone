@@ -1,14 +1,16 @@
-import SingleProduct from "./singleProductTemplate.js";
-import "../../StyleSheet/productContainer.css";
-import { NavLink } from "react-router-dom";
-import { useProducts } from "./useProducts";
 import moment from "moment";
+import { NavLink } from "react-router-dom";
+
+import { useProducts } from "./useProducts";
+import "../../StyleSheet/productContainer.css";
+import SingleProduct from "./singleProductTemplate.js";
 
 function ProductContainer() {
-  const [pros] = useProducts();
+  const [pros,loading] = useProducts();
+  console.log("pros",pros)
   return (
     <div className="products">
-      {pros ? (
+      {Array.isArray(pros) && pros.length > 0 ? (
         pros.map((item) => {
           return (
             <NavLink
@@ -33,9 +35,9 @@ function ProductContainer() {
             </NavLink>
           );
         })
-      ) : (
-        <p>loading...</p>
-      )}
+      ) : loading ? (
+        <h2>loading...</h2>
+      ) : <h2>No Products found</h2>}
     </div>
   );
 }

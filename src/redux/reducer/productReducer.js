@@ -1,13 +1,8 @@
 import { FETCH_PRODUCTS, ERROR_FETCH_PRODUCTS } from "../constants/types";
 
-const INITAIL_STATE = [
-  {
-    title: "Machine",
-    disc: "Washing Machine having capability",
-    price: "15,000",
-    location: "Lahore",
-  },
-];
+const INITAIL_STATE = {
+  products:[  ],
+};
 
 export default function productReducer(state = INITAIL_STATE, action) {
   switch (action.type) {

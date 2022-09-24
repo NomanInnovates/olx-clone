@@ -1,7 +1,7 @@
 import { db } from "../../config/firebase";
 import { FETCH_PRODUCTS, ERROR_FETCH_PRODUCTS } from "../constants/types";
 
-export const productAction = () => async (dispatch) => {
+export const productAction = (callBack) => async (dispatch) => {
   let fetchProducts = [];
   try {
     let res = await db.collection("products").get();
@@ -12,11 +12,13 @@ export const productAction = () => async (dispatch) => {
       type: FETCH_PRODUCTS,
       payload: fetchProducts,
     });
+    callBack()
   } catch (error) {
     console.log("error", error);
     dispatch({
       type: ERROR_FETCH_PRODUCTS,
       payload: error,
     });
+    callBack(false)
   }
 };
