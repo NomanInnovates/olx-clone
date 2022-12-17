@@ -4,8 +4,10 @@ import { productAction } from "../../redux/action/productAction";
 
 export function useProducts() {
   const dispatch = useDispatch();
+  const { products } = useSelector(({ productReducer }) => productReducer);
+
   const [loading, setLoading] = useState(true)
-  const fetchproducts = useSelector((state) => state.productReducer.products);
+  const [filterProducts, setFilterProducts] = useState(products)
 
   const callBack = () => {
     setLoading(false)
@@ -17,10 +19,18 @@ export function useProducts() {
     [dispatch],
   )
 
+  const handleFilterProducts = (cb) => {
+    let filtered = products.filter(cb)
+    setFilterProducts(filtered)
+  }
+
 
   useEffect(() => {
     fetchPro();
   }, [fetchPro]);
+  useEffect(() => {
+    setFilterProducts(products)
+  }, [products]);
 
-  return [fetchproducts, loading];
+  return [filterProducts, loading, handleFilterProducts];
 }

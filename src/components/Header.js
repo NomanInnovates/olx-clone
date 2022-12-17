@@ -1,17 +1,41 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import SearchIcon from "./Icon";
 import "../StyleSheet/header.css";
 
-function Header() {
+function Header({ filterProducts }) {
   let navList = [
-    { id: 1, title: "Mobile Phones", path: "MobilePhones" },
-    { id: 2, title: "Cars", path: "Cars" },
-    { id: 3, title: "Motorbikes", path: "Motorbikes" },
-    { id: 4, title: "TV-Video-Audio", path: "TV-Video-Audio" },
-    { id: 5, title: "Tablets ", path: "Tablets" },
-    { id: 6, title: "Land and plots", path: "LandandPlots" },
+    {
+      id: 1, title: "Mobile Phones", path: "MobilePhones", category
+        :
+        "mobile"
+    },
+    {
+      id: 2, title: "Cars", path: "Cars", category
+        :
+        "Cars"
+    },
+    {
+      id: 3, title: "Motorbikes", path: "Motorbikes", category
+        :
+        "Bikes"
+    },
+    {
+      id: 4, title: "Electronics", path: "TV-Video-Audio", category
+        :
+        "electronics"
+    },
+    {
+      id: 5, title: "Tablets ", path: "Tablets", category
+        :
+        "mobile"
+    },
+    {
+      id: 6, title: "Land and plots", path: "LandandPlots", category
+        :
+        "LandandPlots"
+    },
   ];
 
   return (
@@ -78,11 +102,14 @@ function Header() {
             </option>
           </select>
           <div className="menuItems">
+            <span style={{ margin: "0 10px" }} onClick={() => filterProducts(() => true)}>
+              All
+            </span>
             {navList.map((item) => {
               return (
-                <Link key={item.id} to={item.path}>
+                <span style={{ margin: "0 10px" }} key={item.id} to={item.path} onClick={() => filterProducts(product => product.category == item.category)}>
                   {item.title}
-                </Link>
+                </span>
               );
             })}
           </div>

@@ -1,16 +1,15 @@
 import moment from "moment";
 import { NavLink } from "react-router-dom";
 
-import { useProducts } from "./useProducts";
 import "../../StyleSheet/productContainer.css";
 import SingleProduct from "./singleProductTemplate.js";
 
-function ProductContainer() {
-  const [pros,loading] = useProducts();
+function ProductContainer({products,loading}) {
+
   return (
     <div className="products">
-      {Array.isArray(pros) && pros.length > 0 ? (
-        pros.map((item) => {
+      {Array.isArray(products) && products.length > 0 ? (
+        products.map((item) => {
           return (
             <NavLink
               key={item.id}
@@ -35,7 +34,23 @@ function ProductContainer() {
           );
         })
       ) : loading ? (
-        <h2>loading...</h2>
+        <>
+        <div className="spinner-box">
+          <div className="blue-orbit leo">
+          </div>
+        
+          <div className="green-orbit leo">
+          </div>
+          
+          <div className="red-orbit leo">
+          </div>
+          
+          <div className="white-orbit w1 leo">
+          </div><div className="white-orbit w2 leo">
+          </div><div className="white-orbit w3 leo">
+          </div>
+          <span>Loading...</span>
+        </div></>
       ) : <h2>No Products found</h2>}
     </div>
   );
